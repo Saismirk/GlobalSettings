@@ -1,8 +1,8 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GlobalSettingGenerator;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
@@ -67,7 +67,7 @@ public class SettingGenerator : ISourceGenerator {
         if (string.IsNullOrEmpty(settingsPath)) return false;
 
         var settingsFullPath = SettingsParser.ParseSettings(classSyntax,
-                                                            settingsPath ?? string.Empty,
+                                                            settingsPath,
                                                             tempSettings);
         var namespaceSymbol = classSymbol.ContainingNamespace;
         if (!namespaceSymbol.IsGlobalNamespace) {

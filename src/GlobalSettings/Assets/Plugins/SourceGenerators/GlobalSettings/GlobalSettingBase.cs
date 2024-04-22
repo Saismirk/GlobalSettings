@@ -68,15 +68,9 @@ namespace GlobalSettings {
                 settingType.enumValueIndex = (int)(SettingType)EditorGUI.EnumPopup(rect, (SettingType)settingType.enumValueIndex);
                 var descriptionRect = new Rect(position.x, position.y + EditorGUIUtility.singleLineHeight + 5, position.width, EditorGUIUtility.singleLineHeight * 2);
                 description.stringValue = EditorGUI.TextField(descriptionRect, description.stringValue);
-                var settings = new GlobalSettings();
             }
             
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label) => EditorGUIUtility.singleLineHeight * 3 + 5;
         }
-    }
-
-    [GlobalSettings("../../../Resources/GlobalSettingContainer.asset")]
-    public partial class GlobalSettings { 
-
     }
 }

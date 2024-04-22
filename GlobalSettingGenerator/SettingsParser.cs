@@ -68,6 +68,10 @@ public static class SettingsParser {
             };
             
             if (result < 0) continue;
+            if (tempSettings.Any(s => s.Name == name)) {
+                continue;
+            }
+            
             tempSettings.Add(new GlobalSetting((GlobalSettingType)result, name, description, value));
         }
     }
