@@ -1,7 +1,10 @@
+
 {
-    "name": "GlobalSettings",
+    "name": ".Settings",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GlobalSettings"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

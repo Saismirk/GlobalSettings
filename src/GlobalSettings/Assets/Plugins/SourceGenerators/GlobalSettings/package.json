@@ -2,7 +2,7 @@
   "name": "com.sai.globalsettings",
   "displayName": "GlobalSettings",
   "author": { "name": "Sai" },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "unity": "2021.3",
   "description": "Source-Generated Global Settings for Unity",
   "keywords": [ "SourceGenerator", "Settings", "Plugin" ],
