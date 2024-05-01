@@ -76,7 +76,7 @@ public class SettingGenerator : ISourceGenerator {
 namespace {namespaceSymbol} {{");
         }
 
-        sourceBuilder.AppendLine($@"    public partial class {classSymbol.Name} {{//From: {settingsFullPath}");
+        sourceBuilder.AppendLine($@"    public static partial class {classSymbol.Name} {{//From: {settingsFullPath}");
         switch (attributeSymbol?.Name) {
             case "GlobalSettingsAttribute":
                 sourceBuilder.AppendLine($@"        //Detected Settings: {tempSettings.Count}");

@@ -20,6 +20,27 @@ MonoBehaviour:
     <BoolValue>k__BackingField: 0
     <StringValue>k__BackingField: 
     <Description>k__BackingField: Test Description
+  - <SettingType>k__BackingField: 1
+    <SettingName>k__BackingField: TestIntSetting
+    <FloatValue>k__BackingField: 2.5
+    <IntValue>k__BackingField: 5
+    <BoolValue>k__BackingField: 0
+    <StringValue>k__BackingField: 
+    <Description>k__BackingField: Test Description
+  - <SettingType>k__BackingField: 0
+    <SettingName>k__BackingField: TestBoolSetting
+    <FloatValue>k__BackingField: 2.5
+    <IntValue>k__BackingField: 0
+    <BoolValue>k__BackingField: 1
+    <StringValue>k__BackingField: 
+    <Description>k__BackingField: Test Description
+  - <SettingType>k__BackingField: 3
+    <SettingName>k__BackingField: TestStringSetting
+    <FloatValue>k__BackingField: 2.5
+    <IntValue>k__BackingField: 0
+    <BoolValue>k__BackingField: 0
+    <StringValue>k__BackingField: Test
+    <Description>k__BackingField: Test Description
   className: Settings
   namespaceName: 
   generateAssemblyDefinition: 1

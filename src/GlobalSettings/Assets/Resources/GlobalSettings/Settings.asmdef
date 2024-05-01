@@ -1,6 +1,6 @@
 
 {
-    "name": ".Settings",
+    "name": "Settings",
     "rootNamespace": "",
     "references": [
         "GlobalSettings"

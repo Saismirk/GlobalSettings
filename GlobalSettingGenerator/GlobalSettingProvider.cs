@@ -23,10 +23,17 @@ public static class GlobalSettingProvider {
                    .Aggregate((a, b) => $"{a}_{b}");
 
     public static void Generate(StringBuilder sourceBuilder, GlobalSetting setting) {
+        var settingName = GetSettingName(setting.Name);
+        var settingType = GetSettingType(setting.Type);
         sourceBuilder.AppendLine($@"
         /// <summary>
         /// [Source-Generated] Global setting. {setting.Description}).
         /// </summary>
-        public const {GetSettingType(setting.Type)} {GetSettingName(setting.Name)} = {setting.Value};");
+    #if !UNITY_EDITOR
+        public const {settingType} {settingName} = {setting.Value};
+    #else
+        public static {settingType} {settingName} => GetSetting<{settingType}>(""{setting.Name}"");
+    #endif
+");
     }
 }

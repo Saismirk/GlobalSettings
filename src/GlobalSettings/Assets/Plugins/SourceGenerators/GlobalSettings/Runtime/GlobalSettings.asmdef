@@ -1,13 +1,11 @@
 {
-    "name": "GlobalSettings.Editor",
+    "name": "GlobalSettings",
     "rootNamespace": "",
     "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
+    "overrideReferences": true,
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],

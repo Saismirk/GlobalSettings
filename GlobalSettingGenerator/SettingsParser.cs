@@ -9,10 +9,10 @@ using Microsoft.CodeAnalysis;
 namespace GlobalSettingGenerator;
 
 public static class SettingsParser {
-    public static string ParseSettings(SyntaxNode animatorViewType,
+    public static string ParseSettings(SyntaxNode settingsType,
         string settingsContainerPath,
         ICollection<GlobalSetting> tempSettings) {
-        var basePath = Path.GetDirectoryName(animatorViewType.SyntaxTree.FilePath) ?? string.Empty;
+        var basePath = Path.GetDirectoryName(settingsType.SyntaxTree.FilePath) ?? string.Empty;
         var combinedPath = Path.Combine(basePath, settingsContainerPath);
         var settingsContainerFullPath = Path.GetFullPath(combinedPath);
         if (!File.Exists(settingsContainerFullPath)) {
