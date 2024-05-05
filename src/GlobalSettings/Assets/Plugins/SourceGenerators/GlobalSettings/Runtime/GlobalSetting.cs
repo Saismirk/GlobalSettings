@@ -94,6 +94,6 @@ namespace GlobalSettings {
                 ? EditorGUIUtility.singleLineHeight * 3 + 15 
                 : EditorGUIUtility.singleLineHeight;
         }
-#endif
     }
+#endif
 }
