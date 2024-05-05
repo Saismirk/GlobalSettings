@@ -60,10 +60,10 @@ public static class SettingsParser {
             }
 
             var value = result switch {
-                0 => i < bools.Length ? bools[i] : "false",
+                0 => i < bools.Length ? (bools[i] == "1" ? "true" : "false") : "false",
                 1 => i < ints.Length ? ints[i] : "0",
-                2 => i < floats.Length ? floats[i] + "f" : "0f",
-                3 => i < strings.Length ? strings[i] : "\"\"",
+                2 => i < floats.Length ? $"{floats[i]}f" : "0f",
+                3 => i < strings.Length ? $"\"{strings[i]}\"" : "\"\"",
                 _ => string.Empty
             };
             

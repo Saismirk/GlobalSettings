@@ -10,11 +10,11 @@ using UnityEditor.Compilation;
 namespace GlobalSettings {
     [CreateAssetMenu(menuName = "Global Settings/Create Global Settings", fileName = "GlobalSettings", order = 0)]
     public class GlobalSettingContainer : ScriptableObject {
+#if UNITY_EDITOR
         [SerializeField] GlobalSetting[] settings;
         [SerializeField] string className = "GlobalSettings";
         [SerializeField] string namespaceName = "";
         [SerializeField] bool generateAssemblyDefinition = true;
-#if UNITY_EDITOR
         public Dictionary<string, GlobalSetting> Settings { get; private set; } = new();
 
         public T GetSetting<T>(string settingKey) {
